@@ -16,6 +16,10 @@ const Home = () => {
         title: '',
         price: '',
         category: '',
+        user: {
+            name: '',
+            image: '',
+        },
     });
     const [posts, setPosts] = useState([
         {
@@ -24,6 +28,10 @@ const Home = () => {
             title: '2024 Corvette',
             price: '23,489',
             category: 'Cars & Vehicles',
+            user: {
+                name: 'John Doe',
+                image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            }
         },
         {
             id: 2,
@@ -31,6 +39,10 @@ const Home = () => {
             title: '2022 Kawasaki Ninja',
             price: '2,043',
             category: 'Cars & Vehicles',
+            user: {
+                name: 'John Doe',
+                image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            }
         },
         {
             id: 3,
@@ -38,6 +50,10 @@ const Home = () => {
             title: 'Nike Air Max 270',
             price: '249',
             category: 'Clothing & Accessories',
+            user: {
+                name: 'John Doe',
+                image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            }
         }
     ]);
     const bottomSheetRef = useRef<BottomSheet>(null);

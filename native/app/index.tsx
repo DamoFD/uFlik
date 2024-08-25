@@ -1,17 +1,22 @@
-import { View, Text, Pressable } from 'react-native';
+import { View, Image, StyleSheet, StatusBar } from 'react-native';
 import React from 'react';
-import { useRouter } from 'expo-router';
+import Loader from '@/components/Loader';
 
 const Index = () => {
-    const router = useRouter();
     return (
-        <View>
-            <Pressable onPress={() => router.push('/home')}>
-                <Text>Index</Text>
-                <Text>Home</Text>
-            </Pressable>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <StatusBar barStyle="dark-content" />
+            <Image resizeMode="contain" style={styles.image} source={require('@/assets/images/uflik-background.png')} />
+            <Loader size="large" color="#FE4056" />
         </View>
     );
 }
 
 export default Index
+
+const styles = StyleSheet.create({
+    image: {
+        width: '100%',
+        height: 500,
+    },
+});
